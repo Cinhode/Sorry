@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Georgia&display=swap');
+
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #f0e68c, #eedd82, #f0e68c);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    color: #4a3a2a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative; /* For particle effects */
+    overflow: hidden; /* Hide overflow from particles */
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Particle effect */
+.particle {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    animation: twinkle 5s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+    0%, 100% { transform: scale(0.5); opacity: 0; }
+    50% { transform: scale(1); opacity: 1; }
+}
+
+.container {
+    background-color: #fff8dc; /* Cornsilk */
+    border: 5px solid #b8860b; /* DarkGoldenRod */
+    border-radius: 20px; /* Slightly more rounded */
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3), 0 0 60px rgba(255, 215, 0, 0.4); /* More prominent shadow */
+    max-width: 700px;
+    width: 100%;
+    position: relative; /* For z-index if needed */
+    z-index: 10;
+    transition: all 0.5s ease-in-out;
+}
+
+h1 {
+    color: #8b0000; /* DarkRed */
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5em; /* Slightly larger */
+    margin-bottom: 25px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2), 0 0 10px #ffd700; /* More intense shadow and gold glow */
+    letter-spacing: 2px;
+}
+
+p {
+    font-size: 1.3em; /* Slightly larger */
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.buttons {
+    margin-top: 40px; /* More space */
+}
+
+.royal-button {
+    background-color: #ffd700; /* Gold */
+    color: #8b0000; /* DarkRed */
+    border: 3px solid #b8860b; /* Thicker border */
+    padding: 18px 35px; /* Larger padding */
+    margin: 0 20px;
+    border-radius: 12px;
+    font-size: 1.3em; /* Slightly larger text */
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.royal-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: all 0.6s;
+}
+
+.royal-button:hover::before {
+    left: 100%;
+}
+
+.royal-button:hover {
+    background-color: #b8860b; /* DarkGoldenRod */
+    color: #fff8dc; /* Cornsilk */
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.9), 0 0 40px rgba(255, 215, 0, 0.5); /* More intense glow */
+    transform: translateY(-3px);
+}
+
+#not-forgive-btn {
+    cursor: not-allowed;
+    opacity: 0.7; /* Slightly less opaque to show it's disabled */
+    filter: grayscale(50%); /* Visually indicate it's not active */
+}
+
+/* Popup styles */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s ease-in-out;
+}
+
+.popup-overlay.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup-content {
+    background-color: #fff8dc;
+    border: 5px solid #b8860b;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.4), 0 0 80px rgba(255, 215, 0, 0.6);
+    max-width: 500px;
+    width: 90%;
+    transform: scale(0.8);
+    transition: transform 0.3s ease-in-out;
+    position: relative; /* For movement */
+}
+
+.popup-overlay.active .popup-content {
+    transform: scale(1);
+}
+
+.popup-content h2 {
+    color: #8b0000;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1), 0 0 8px #ffd700;
+}
+
+.popup-content p {
+    font-size: 1.1em;
+    margin-bottom: 25px;
+}
+
+.popup-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    border: 3px solid #b8860b;
+}
+
+.popup-close-btn {
+    background-color: #8b0000;
+    color: #fff8dc;
+    border: 2px solid #b8860b;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.popup-close-btn:hover {
+    background-color: #b8860b;
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(139, 0, 0, 0.7);
+}

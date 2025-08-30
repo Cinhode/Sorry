@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Thiệp Mời Xem Phim - Gia Đình</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: radial-gradient(circle, #1a1a1a, #000);
+      color: #f5e6cc;
+      font-family: 'Georgia', serif;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    /* Hiệu ứng chữ */
+    h1, h2, p {
+      text-shadow: 0 0 10px gold, 0 0 20px #fff4c2;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 5px gold, 0 0 10px #fff4c2; }
+      to   { text-shadow: 0 0 20px gold, 0 0 40px #fff4c2; }
+    }
+
+    /* Nền có hạt lấp lánh */
+    .stars {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0; left: 0;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .star {
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: twinkle 5s infinite;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.2; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.5); }
+    }
+
+    /* Khung cổ điển */
+    .card {
+      border: 4px double gold;
+      padding: 40px;
+      background: rgba(30, 20, 10, 0.8);
+      border-radius: 15px;
+      box-shadow: 0 0 40px gold;
+      max-width: 600px;
+    }
+
+    /* Nút phát nhạc */
+    .music-control {
+      margin-top: 20px;
+      font-size: 18px;
+      background: gold;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .music-control:hover {
+      background: darkgoldenrod;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <!-- Hiệu ứng sao -->
+  <div class="stars"></div>
+
+  <!-- Nội dung thiệp -->
+  <div class="card">
+    <h1>🌟 Thiệp Mời Gia Đình 🌟</h1>
+    <h2>Kính mời cả nhà cùng nhau</h2>
+    <p><b>Buổi Xem Phim Ấm Áp</b></p>
+    <p><i>Thời gian:</i> Tối thứ 7, 19:30</p>
+    <p><i>Địa điểm:</i> Phòng khách nhà mình</p>
+    <p>Hãy cùng thưởng thức một đêm phim & âm nhạc cổ điển đầy kỷ niệm ✨</p>
+    <button class="music-control" onclick="toggleMusic()">🎵 Bật / Tắt Nhạc</button>
+  </div>
+
+  <!-- Nhạc nền -->
+  <audio id="bg-music" loop>
+    <source src="your-music.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    // Tạo nhiều sao lấp lánh
+    const starsContainer = document.querySelector('.stars');
+    for (let i = 0; i < 100; i++) {
+      const star = document.createElement('div');
+      star.classList.add('star');
+      const size = Math.random() * 3 + 2;
+      star.style.width = size + 'px';
+      star.style.height = size + 'px';
+      star.style.top = Math.random() * 100 + '%';
+      star.style.left = Math.random() * 100 + '%';
+      star.style.animationDuration = (Math.random() * 3 + 2) + 's';
+      starsContainer.appendChild(star);
+    }
+
+    // Điều khiển nhạc
+    const music = document.getElementById("bg-music");
+    function toggleMusic() {
+      if (music.paused) {
+        music.play();
+      } else {
+        music.pause();
+      }
+    }
+  </script>
+</body>
+</html>
