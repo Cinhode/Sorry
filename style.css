@@ -2,10 +2,10 @@
 
 body {
     font-family: 'Georgia', serif;
-    background: linear-gradient(135deg, #f0e68c, #eedd82, #f0e68c);
+    background: linear-gradient(135deg, #fce4ec, #f8bbd0, #fce4ec); /* Light pink gradient */
     background-size: 400% 400%;
     animation: gradientAnimation 15s ease infinite;
-    color: #4a3a2a;
+    color: #4a3a2a; /* Keep dark text for contrast */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,12 +37,12 @@ body {
 }
 
 .container {
-    background-color: #fff8dc; /* Cornsilk */
-    border: 5px solid #b8860b; /* DarkGoldenRod */
+    background-color: #fff0f5; /* LavenderBlush - light pink */
+    border: 5px solid #e91e63; /* Deep Pink */
     border-radius: 20px; /* Slightly more rounded */
     padding: 40px;
     text-align: center;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3), 0 0 60px rgba(255, 215, 0, 0.4); /* More prominent shadow */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3), 0 0 60px rgba(255, 105, 180, 0.4); /* Pink glow */
     max-width: 700px;
     width: 100%;
     position: relative; /* For z-index if needed */
@@ -51,11 +51,11 @@ body {
 }
 
 h1 {
-    color: #8b0000; /* DarkRed */
+    color: #ad1457; /* Darker Pink */
     font-family: 'Playfair Display', serif;
     font-size: 3.5em; /* Slightly larger */
     margin-bottom: 25px;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2), 0 0 10px #ffd700; /* More intense shadow and gold glow */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2), 0 0 10px #ff69b4; /* HotPink glow */
     letter-spacing: 2px;
 }
 
@@ -70,9 +70,9 @@ p {
 }
 
 .royal-button {
-    background-color: #ffd700; /* Gold */
-    color: #8b0000; /* DarkRed */
-    border: 3px solid #b8860b; /* Thicker border */
+    background-color: #ffb6c1; /* LightPink */
+    color: #ad1457; /* Darker Pink */
+    border: 3px solid #e91e63; /* Deep Pink */
     padding: 18px 35px; /* Larger padding */
     margin: 0 20px;
     border-radius: 12px;
@@ -103,16 +103,16 @@ p {
 }
 
 .royal-button:hover {
-    background-color: #b8860b; /* DarkGoldenRod */
-    color: #fff8dc; /* Cornsilk */
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.9), 0 0 40px rgba(255, 215, 0, 0.5); /* More intense glow */
+    background-color: #e91e63; /* Deep Pink */
+    color: #fff0f5; /* LavenderBlush */
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.9), 0 0 40px rgba(255, 105, 180, 0.5); /* More intense pink glow */
     transform: translateY(-3px);
 }
 
 #not-forgive-btn {
     cursor: not-allowed;
     opacity: 0.7; /* Slightly less opaque to show it's disabled */
-    filter: grayscale(50%); /* Visually indicate it's not active */
+    filter: saturate(30%) brightness(120%); /* Adjust filter for pink theme */
 }
 
 /* Popup styles */
@@ -138,12 +138,12 @@ p {
 }
 
 .popup-content {
-    background-color: #fff8dc;
-    border: 5px solid #b8860b;
+    background-color: #fff0f5; /* LavenderBlush */
+    border: 5px solid #e91e63; /* Deep Pink */
     border-radius: 20px;
     padding: 30px;
     text-align: center;
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.4), 0 0 80px rgba(255, 215, 0, 0.6);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.4), 0 0 80px rgba(255, 105, 180, 0.6); /* Pink glow */
     max-width: 500px;
     width: 90%;
     transform: scale(0.8);
@@ -156,11 +156,11 @@ p {
 }
 
 .popup-content h2 {
-    color: #8b0000;
+    color: #ad1457; /* Darker Pink */
     font-family: 'Playfair Display', serif;
     font-size: 2.5em;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1), 0 0 8px #ffd700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1), 0 0 8px #ff69b4; /* HotPink glow */
 }
 
 .popup-content p {
@@ -173,13 +173,13 @@ p {
     height: auto;
     border-radius: 10px;
     margin-bottom: 25px;
-    border: 3px solid #b8860b;
+    border: 3px solid #e91e63; /* Deep Pink */
 }
 
 .popup-close-btn {
-    background-color: #8b0000;
-    color: #fff8dc;
-    border: 2px solid #b8860b;
+    background-color: #ad1457; /* Darker Pink */
+    color: #fff0f5; /* LavenderBlush */
+    border: 2px solid #e91e63; /* Deep Pink */
     padding: 10px 25px;
     border-radius: 8px;
     font-size: 1.1em;
@@ -189,9 +189,9 @@ p {
 }
 
 .popup-close-btn:hover {
-    background-color: #b8860b;
+    background-color: #e91e63; /* Deep Pink */
     color: #ffffff;
-    box-shadow: 0 0 10px rgba(139, 0, 0, 0.7);
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.7); /* Pink glow */
 }
 
 .gif-embed {
@@ -202,12 +202,12 @@ p {
 .gif-embed iframe {
     max-width: 100%;
     border-radius: 10px;
-    border: 3px solid #b8860b;
+    border: 3px solid #e91e63; /* Deep Pink */
 }
 
 /* Styles for CONGRATULATION.html */
 .fireworks-container {
-    background: radial-gradient(circle at center, #1a0000 0%, #000000 100%); /* Dark, rich radial gradient */
+    background: radial-gradient(circle at center, #880e4f 0%, #311b92 100%); /* Deep purple-pink gradient */
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -220,16 +220,16 @@ p {
 }
 
 .fireworks-container h1 {
-    color: #ffd700; /* Gold */
+    color: #ff80ab; /* Light Pink */
     font-size: 5em; /* Larger font size */
-    text-shadow: 0 0 20px #ff0, 0 0 40px #f00, 0 0 60px #fff; /* More intense glowing effect */
+    text-shadow: 0 0 20px #ff4081, 0 0 40px #f8bbd0, 0 0 60px #ffe0b2; /* Pink/light glow */
     letter-spacing: 5px; /* Wider letter spacing for impact */
     z-index: 10;
 }
 
 .fireworks-container p {
     font-size: 1.8em; /* Larger font size */
-    color: #fff8dc;
+    color: #fce4ec; /* Lighter pink */
     margin-top: 20px;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* Subtle shadow for readability */
     z-index: 10;
@@ -241,8 +241,8 @@ p {
 }
 
 .fireworks-container .gif-embed iframe {
-    border: 5px solid #ffd700; /* Gold border */
-    box-shadow: 0 0 25px rgba(255, 215, 0, 0.8), 0 0 50px rgba(255, 215, 0, 0.5); /* Glowing box shadow */
+    border: 5px solid #ff80ab; /* Light Pink border */
+    box-shadow: 0 0 25px rgba(255, 128, 171, 0.8), 0 0 50px rgba(255, 128, 171, 0.5); /* Pink glowing box shadow */
 }
 
 /* Fireworks particle (will be generated by JS) */
@@ -250,7 +250,7 @@ p {
     position: absolute;
     width: 5px;
     height: 5px;
-    background-color: white;
+    background-color: #ff80ab; /* Light Pink firework particles */
     border-radius: 50%;
     opacity: 0;
     animation: fireworkExplosion 1s ease-out forwards;
@@ -259,4 +259,102 @@ p {
 @keyframes fireworkExplosion {
     0% { transform: scale(0); opacity: 1; }
     100% { transform: scale(2); opacity: 0; }
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container,
+    .popup-content {
+        padding: 20px;
+        border-radius: 15px;
+        max-width: 95%;
+    }
+
+    h1 {
+        font-size: 2.5em; /* Smaller h1 for main page */
+        margin-bottom: 15px;
+        letter-spacing: 1px;
+    }
+
+    p {
+        font-size: 1em;
+        line-height: 1.5;
+        margin-bottom: 15px;
+    }
+
+    .buttons {
+        flex-direction: column; /* Stack buttons vertically */
+        margin-top: 20px;
+    }
+
+    .royal-button {
+        padding: 12px 25px;
+        margin: 10px 0; /* Adjust margin for stacking */
+        font-size: 1em;
+        width: 100%; /* Make buttons full width */
+        box-sizing: border-box;
+    }
+
+    /* Popup specific adjustments */
+    .popup-content h2 {
+        font-size: 1.8em;
+        margin-bottom: 15px;
+    }
+
+    .popup-content p {
+        font-size: 0.9em;
+        margin-bottom: 20px;
+    }
+
+    .popup-content img,
+    .gif-embed iframe {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* CONGRATULATION.html specific adjustments */
+    .fireworks-container h1 {
+        font-size: 3.5em; /* Smaller h1 for congratulation page */
+        letter-spacing: 2px;
+    }
+
+    .fireworks-container p {
+        font-size: 1.2em;
+        margin-top: 15px;
+    }
+
+    .fireworks-container .gif-embed {
+        margin-top: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em; /* Even smaller h1 for very small screens */
+    }
+
+    .fireworks-container h1 {
+        font-size: 2.8em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+
+    .royal-button {
+        font-size: 0.9em;
+        padding: 10px 20px;
+    }
+
+    .popup-content h2 {
+        font-size: 1.5em;
+    }
+
+    .popup-content p {
+        font-size: 0.85em;
+    }
 }
